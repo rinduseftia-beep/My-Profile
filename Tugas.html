@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Papsi</title>
+  <style> 
+    body {
+      font-family: Times 'Times New Roman', Times, serif;
+      background: linear-gradient(135deg, #f7f5f3, #e3ddd3, #195050, #3657774e);
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #252222;
+      font-weight: 700;
+    }
+    p {
+      color: #444;
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .foto {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .foto:hover {
+      transform: scale(1.05);
+    }
+    .profil, .teks {
+      display: none;
+      background: #ffffffdd;
+      padding: 20px;
+      margin: 20px auto 0;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      max-width: 600px;
+      text-align: left;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    .profil h2 {
+   font-family: 'Poppins', sans-serif; /* FONT TEGAS */
+      font-size: 25px;
+      font-weight: 750; 
+      color: #0a2929;
+      margin-bottom: 13px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase; 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.30); 
+    }
+    .profil p b {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      color: #0c0e0e;
+    }
+    .teks {
+      text-align: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Profile</h1>
+  
+  <img src="rinduseftiaa.jpg" alt="Foto Saya" class="foto" onclick="tampilkanProfil()">
+
+  <div id="profil" class="profil">
+    <h2> ABOUT ME </h2>
+  <p><b>Nama:</b> Rindu Seftia Nengtias</p>
+  <p><b>NIM:</b> 2403110542</p>
+  <p><b>Kelas:</b> Sistem Informasi C</p>
+  <p><b>Alamat:</b> Jl. Bangau Sakti</p>
+  <p><b>Asal Kota:</b> Dumai</p>
+  <p><b>Asal Sekolah:</b> SMA Negeri 1 Dumai</p>
+</div>
+
+  <div id="teks" class="teks">
+    <p>Halo, perkenalkan nama saya Rindu Seftia Nengtias orang-orang biasa memanggil dengan nama rindu. Mungkin dari informasi diatas data diri saya sudah jelas, baik saya jelasin sedikit agar lebih spesifik.
+       Saya lahir di Bengkalis pada tanggal 5 September 2005 merupakan anak ke 4 dari 5 bersaudara. Cita-cita ya... kalau bicara cita-cita pastinya semua orang ingin jadi orang yang sukses, membanggakan orangtua, agama, dan negara dan benar
+        tentu saja saya juga begitu. </p>
+    <p> Awalnya saya ingin menjadi seorang Apoteker dan itu bukan karena murni keinginan saya sendiri
+      tetapi tidak ada pemaksaan juga untuk saya menekuni bidang obat-obatan tersebut, itu semata-mata hanya sebuah
+      keinginan dari ayah saya. Lalu pada SMA kelas 12 semester satu saya mulai tertarik dengan bidang IT, ini karena awalnya saya melihat orang-orang
+      yang bekerja di bidang IT itu keren, mereka bisa membuat aplikasi, website, game, dan lain-lain. Dari situ saya mulai mencari tahu tentang dunia IT, tetapi pemahaman saya di bidang ini
+      tidak terlalu dalam, hanya sebatas tahu saja. </p>
+      <p> Hobi saya yaitu saya gemar sekali nonton film semua genre saya suka, lalu saya juga suka membaca cerita fiksi seperti novel atau <i> Alternatif Universe </i>(AU) saya sangat suka cerita yang endingnya itu sad, tidak tahu kenapa bagi saya membaca cerita yang sedih itu menyenangkan.
+        Selain  itu saya juga suka mendengarkan musik. Ooh ya, saya juga suka memasak, saya senang sekali  mencoba resep-resep baru yang ada di <i> Tiktok </i> dan <i> Instagram</i>. Tentunya saya tidak sendiri, saya membuatnya bersama ibu saya ketika saya pulang ke rumah. 
+        Kepribadian saya introvert, saya tidak terlalu nyaman berkumpul dengan banyak orang tetapi bukan berarti saya takut orang hanya saja rasanya energi saya cepat habis jika terlalu lama berinteraksi dengan banyak orang. Mungkin itu sedikit gambaran tentang diri saya, terima kasih sudah berkunjung dan membaca ke halaman profil saya.
+      </p>
+    </div>
+
+<footer style="margin-top:40px; text-align:center; font-size:14px; color:#161515; font-family:'Poppins', sans-serif;">
+  © 2025 Rindu Seftia Nengtias. All Rights Reserved.
+</footer>
+
+    
+  <script>
+    function tampilkanProfil() {
+      var profil = document.getElementById("profil");
+      var teks = document.getElementById("teks");
+
+      if (profil.style.display === "none" || profil.style.display === "") {
+        profil.style.display = "block";
+        teks.style.display = "block";
+      } else {
+        profil.style.display = "none";
+        teks.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
